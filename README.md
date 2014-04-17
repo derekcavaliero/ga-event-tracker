@@ -14,7 +14,7 @@ How to use:
 <strong>Step 2: Include jquery.gaeventtracker.js</strong>
 
 <pre>
-&lt;script src="jquery.gaeventtracker.js"&gt;&lt;/script&gt;
+&lt;script src="//raw.githubusercontent.com/derekcavaliero/gaeventtracker/master/jquery.gaeventtracker.js"&gt;&lt;/script&gt;
 </pre>
 
 <strong>Step 3: Create a new .gaeventracker object on .ready()</strong>
