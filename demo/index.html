@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7 cover-bg"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8 cover-bg"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9 cover-bg"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>jquery.gaeventracker.js - Demo</title>
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/cover.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+        
+        	// Classic Analytics
+			    var _gaq = _gaq || [];
+			    _gaq.push(['_setAccount', 'UA-XXXXXX-X']);
+			    _gaq.push(['_trackPageview']);
+			    (function () {
+			        var ga = document.createElement('script');
+			        ga.type = 'text/javascript';
+			        ga.async = true;
+			        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			        var s = document.getElementsByTagName('script')[0];
+			        s.parentNode.insertBefore(ga, s);
+			    })();
+			    
+					// Universal Analytics
+			    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			    })(window,document,'script','http://www.google-analytics.com/analytics.js','ga');
+			    
+			    ga('create', 'UA-XXXXXX-X', 'auto');
+			    ga('send', 'pageview');
+			    
+				</script>
+				
+				<script src="../jquery.gaeventtracker.js"></script>
+				
+				<script>
+				
+			    jQuery( document ).ready(function( $ ) {
+			    
+			    		var debug = true;
+			    
+			    		// Hover Demo
+			        $('.track-it.hover').gaeventtracker({         // Target all elements with class "track-it"
+			        
+			            'category' : 'Hover Fallback Category',   // Fallback to use if data-ga-category attribute isn't set
+			            'action'   : 'Hover Fallback Action',     // Fallback to use if data-ga-action attribute isn't set
+			            'label'    : 'Hover Fallback Label',      // Fallback to use if data-ga-label attribute isn't set
+			            'value'    : 1234,          				// Fallback to use if data-ga-value attribute isn't set
+			            'nonint'   : false,         				// Fallback to use if data-ga-nonint attribute isn't set
+			            'delay'    : {
+			                           'status' : false 
+			                           },
+			            'debug'		 : debug
+			                           
+			        }); 
+			        
+			        // Hover Demo
+			        $('.track-it.click').gaeventtracker({         // Target all elements with class "track-it"
+			        
+			            'category' : 'Click Fallback Category',   // Fallback to use if data-ga-category attribute isn't set
+			            'action'   : 'Click Fallback Action',     // Fallback to use if data-ga-action attribute isn't set
+			            'label'    : 'Click Fallback Label',      // Fallback to use if data-ga-label attribute isn't set
+			            'value'    : 1234,          				// Fallback to use if data-ga-value attribute isn't set
+			            'nonint'   : false,         				// Fallback to use if data-ga-nonint attribute isn't set
+			            'delay'    : {
+			                           'status' : true 
+			                           },
+			            'debug'    : debug
+			                           
+			        }); 
+			        
+			    });
+				
+				</script>
+				
+    </head>
+    <body>
+    
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand"><a href="/index.html">GA Event Tracker</a></h3>
+              <ul class="nav masthead-nav">
+                <li><a href="/getting-started.html">Getting Started</a></li>
+                <li><a href="/documentation.html">Documentation</a></li>
+                <li><a href="/demos.html">Demos</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">jQuery GA Event Tracker</h1>
+            <p class="lead">GA Event Tracker is a jQuery plugin developed to make Google Analytics event tracking easier and more manageable.</p>
+            <p class="lead">
+              <a href="/getting-started.html" class="btn btn-lg btn-default">Getting Started</a> &nbsp; <a href="/documentation.html" class="btn btn-lg btn-default">Developer Docs</a>
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>&copy; Copyright 2014 <a href="http://www.webmechanix.com" target="_blank">WebMechanix</a>, developed by <a href="https://twitter.com/derekcavaliero">@derekcavaliero</a>, <a href="https://twitter.com/webmechanix">@WebMechanix</a></p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>    
+    
+    </body>
+</html>
