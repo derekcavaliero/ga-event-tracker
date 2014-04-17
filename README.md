@@ -26,7 +26,7 @@ How to use:
     data-ga-label="Google Homepage" 
     data-ga-value="100" 
     data-ga-nonint="false" 
-    data-ga-delay="false"&gt;Google.comt&lt;/&gt;
+    data-ga-delay="false"&gt;Google.comt&lt;/a&gt;
 </pre>
 
 <strong>Step 4: Initialize a new .gaeventracker object on .ready()</strong>
