@@ -20,7 +20,13 @@ How to use:
 <strong>Step 3: Modify HTML for tracked items</strong>
 
 <pre>
-&lt;a href="http://www.google.com" target="_blank" class="track-it" data-ga-category="Outbound Links" data-ga-action="Google" data-ga-label="Google Homepage" data-ga-value="100" data-ga-nonint="false" data-ga-delay="false"&gt;Google.comt&lt;/&gt;
+&lt;a href="http://www.google.com" target="_blank" class="track-it" 
+    data-ga-category="Outbound Links" 
+    data-ga-action="Google" 
+    data-ga-label="Google Homepage" 
+    data-ga-value="100" 
+    data-ga-nonint="false" 
+    data-ga-delay="false"&gt;Google.comt&lt;/&gt;
 </pre>
 
 <strong>Step 4: Initialize a new .gaeventracker object on .ready()</strong>
