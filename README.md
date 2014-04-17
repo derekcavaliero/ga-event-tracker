@@ -17,7 +17,13 @@ How to use:
 &lt;script src="//raw.githubusercontent.com/derekcavaliero/gaeventtracker/master/jquery.gaeventtracker.js"&gt;&lt;/script&gt;
 </pre>
 
-<strong>Step 3: Create a new .gaeventracker object on .ready()</strong>
+<strong>Step 3: Modify HTML for tracked items</strong>
+
+<pre>
+&lt;a href="http://www.google.com" target="_blank" class="track-it" data-ga-category="Outbound Links" data-ga-action="Google" data-ga-label="Google Homepage" data-ga-value="100" data-ga-nonint="false" data-ga-delay="false"&gt;Google.comt&lt;/&gt;
+</pre>
+
+<strong>Step 4: Initialize a new .gaeventracker object on .ready()</strong>
 
 <pre>
 jQuery( document ).ready(function( $ ) {
