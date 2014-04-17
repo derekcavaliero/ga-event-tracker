@@ -9,10 +9,9 @@ Step 1: Include jQuery
 
 Step 2: Include jquery.gaeventtracker.js
 
-Step 3: Create a new .gaeventracker object on .ready
+Step 3: Create a new .gaeventracker object on .ready()
 
 <code>
-
 	jQuery( document ).ready(function( $ ) {
 	
 		$('.track-it').gaeventtracker({
@@ -27,5 +26,4 @@ Step 3: Create a new .gaeventracker object on .ready
 		});	
 		
 	});
-
 </code>
