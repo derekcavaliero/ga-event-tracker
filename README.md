@@ -34,15 +34,17 @@ How to use:
 <pre>
 jQuery( document ).ready(function( $ ) {
 
-	$('.track-it').gaeventtracker({
-  		'category' : 'Fallback Category',
-  		'action'   : 'Fallback Action',
-  		'label'    : 'Fallback Label',
-  		'value'    : 1234,
-  		'nonint'   : false,
+	$('.track-it').gaeventtracker({ 		// Target all elements with class "track-it"
+	
+  		'category' : 'Fallback Category',	// Fallback to use if data-ga-category attribute isn't set
+  		'action'   : 'Fallback Action',		// Fallback to use if data-ga-action attribute isn't set
+  		'label'    : 'Fallback Label',		// Fallback to use if data-ga-label attribute isn't set
+  		'value'    : 1234,			// Fallback to use if data-ga-value attribute isn't set
+  		'nonint'   : false,			// Fallback to use if data-ga-nonint attribute isn't set
   		'delay'    : {
-  		               'status' : false
+  		               'status' : false 
 		               }
+		               
 	});	
 	
 });
