@@ -15,14 +15,14 @@
 			'action' : 'Clicked',
 			'label' : location.pathname,
 			'value' : 0,
-			'nonint' : true,
+			'nonint' : true,	 
 			'delay' : {
-				'status' : true,
-				'time' : 100
+				'status' : true,   
+				'time' : 100			 // time for delay in milliseconds
 			},
 			'trigger' : 'click', // click | focus | mouseenter | change | submit | blur 
-			'type' : 'classic',
-			'debug' : true
+			'type' : 'classic',  // classic | universal | all
+			'debug' : true       
 		};
     
     var settings = $.extend( {}, defaults, options );
@@ -85,6 +85,11 @@
 	    }
       switch(eventvalues.type) {
 
+        case 'all':
+        	ga('send', 'event', eventvalues.category, eventvalues.action, eventvalues.label, eventvalues.value, {'nonInteraction': eventvalues.nonint});
+        	_gaq.push(['_trackEvent', eventvalues.category, eventvalues.action, eventvalues.label, eventvalues.value, eventvalues.nonint]);
+        break;
+
   	    case 'universal':
   		    ga('send', 'event', eventvalues.category, eventvalues.action, eventvalues.label, eventvalues.value, {'nonInteraction': eventvalues.nonint});
         break;
@@ -93,7 +98,7 @@
         default:
           _gaq.push(['_trackEvent', eventvalues.category, eventvalues.action, eventvalues.label, eventvalues.value, eventvalues.nonint]);
         break;
-	    
+        
       }
 	    
     }
