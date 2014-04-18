@@ -1,10 +1,10 @@
 jQuery( document ).ready(function( $ ) {
   
-  // make code pretty
-    window.prettyPrint && prettyPrint()
+  	// make code pretty
+    window.prettyPrint && prettyPrint();
    
 		var debug = true;
-		var debugType = 'console';
+		var debugType = 'alert';
 
     // Click Demo
     $('.track-it.click').gaeventtracker({           
@@ -14,7 +14,7 @@ jQuery( document ).ready(function( $ ) {
         'value'    : 1111,          
         'nonint'   : false,       
         'delay'    : true,
-        'delay_timeout' : 100,
+        'delay_timeout' : 150,
         'debug'    : {
         							 'status' : debug,
 											 'type'	  : debugType
@@ -26,9 +26,10 @@ jQuery( document ).ready(function( $ ) {
         'ga_type'  : 'all',
         'trigger'  : 'mouseenter',    
         'category' : 'Hover Fallback Category',   
-        'action'   : 'Hover Fallback Action',     
+        'action'   : 'Hover Fallback Action',    
+        'delay'    : false, 
         'value'    : 2222,          							
-        'nonint'   : false,         							
+        'nonint'   : true,         							
         'debug'    : {
         							 'status' : debug,
 											 'type'	  : debugType
@@ -42,24 +43,26 @@ jQuery( document ).ready(function( $ ) {
         'category' : 'Blur Fallback Category',   
         'action'   : 'Blur Fallback Action',     
         'value'    : 3333,          							
-        'nonint'   : false,         							
+        'nonint'   : true,       
+        'delay'    : false,  							
         'debug'    : {
         							 'status' : debug,
-											 'type'	  : debugType
+											 'type'	  : 'console'
         						 }                       
     }); 
 
     // Focus Demo
-    $('.track-it.blur').gaeventtracker({         
+    $('.track-it.focus').gaeventtracker({         
         'ga_type'  : 'all',
         'trigger'  : 'focus',    
         'category' : 'Focus Fallback Category',   
         'action'   : 'Focus Fallback Action',     
         'value'    : 4444,          							
-        'nonint'   : false,         							
+        'nonint'   : true,         			
+        'delay'	   : false,				
         'debug'    : {
         							 'status' : debug,
-											 'type'	  : debugType
+											 'type'	  : 'console'
         						 }                       
     });
        
