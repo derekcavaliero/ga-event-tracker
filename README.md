@@ -1,4 +1,4 @@
-gaeventtracker
+GA Event Tracker
 ==============
 
 A jQuery plugin to help with Google Analytics Event tracking.
