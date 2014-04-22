@@ -47,7 +47,7 @@ Universal Code (Replace UA-XXXXXX-X with your Google Analytics Account #)
 <strong>Step 3: Include jquery.gaeventtracker.js after Google Analyitcs</strong>
 
 <pre>
-&lt;script src="//raw.githubusercontent.com/derekcavaliero/gaeventtracker/master/jquery.gaeventtracker.js"&gt;&lt;/script&gt;
+&lt;script src="//raw.github.com/derekcavaliero/ga-event-tracker/v1.0/jquery.gaeventtracker.js"&gt;&lt;/script&gt;
 </pre>
 
 <strong>Step 4: Modify HTML for tracked items</strong>
