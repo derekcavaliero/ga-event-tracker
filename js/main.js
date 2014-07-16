@@ -11,6 +11,7 @@ jQuery( document ).ready(function( $ ) {
         'ga_type'  : 'all',
         'category' : 'Click Fallback Category',   
         'action'   : 'Click Fallback Action',     
+        'label'    : $(this).attr('href'),
         'value'    : 1111,          
         'nonint'   : false,       
         'delay'    : true,

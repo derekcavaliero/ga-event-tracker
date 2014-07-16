@@ -6,7 +6,7 @@
  * Requires: jQuery v1.3.2 or later
  */
  
-(function ( $ ) {
+;(function ( $, window, document, undefined ) {
 
 	$.fn.gaeventtracker = function( options ){
 		
@@ -18,8 +18,8 @@
 			'nonint' : true,	 
 			'delay' : true, 
 			'delay_timeout' : 100,		 // time for delay in milliseconds
-			'trigger' : 'click', // click | focus | mouseenter | blur 
-			'ga_type' : 'classic',  // classic | universal | all
+			'trigger' : 'click',       // click | focus | mouseenter | blur 
+			'ga_type' : 'classic',     // classic | universal | all
 			'debug' : {
 				'type' : 'console',
 				'status' : false
@@ -148,8 +148,4 @@
 		
 	};
 
-}(jQuery));
-
-jQuery( document ).ready(function( $ ) {
-
-});
+})( jQuery, window, document );
