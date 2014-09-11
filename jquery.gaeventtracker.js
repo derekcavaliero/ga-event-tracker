@@ -2,15 +2,15 @@
  * jQuery GA Event Tracker
  * Examples and documentation at: http://ga-event-tracker.wmxtools.com
  * Copyright (c) 2014 Derek Cavaliero
- * Version: 1.1 (10-SEPT-2014)
+ * Version: 1.2 (10-SEPT-2014)
  * Requires: jQuery v1.4.3 or later
  */
 
-;(function ( $, window, document, undefined ) {
+;(function ( $ ) {
 
-	$.fn.gaeventtracker = function( options ){
+	$.fn.gatrack = function( options ){
 
-		defaults = {
+		var defaults = {
 						'category'      : 'Tracked Element',
 						'action'        : 'Clicked',
 						'label'         : location.pathname,
@@ -26,7 +26,7 @@
 										  }
 				   };
 
-	    settings = $.extend( {}, defaults, options );
+	    var settings = $.extend( {}, defaults, options );
 
 		return this.each( function() {
 
@@ -127,8 +127,6 @@
 
 	      	});
 
-	      	return $this;
-
 		});
 
 		function trackEvent( obj, eventvalues, e ){
@@ -217,6 +215,6 @@
 
 	console.log( 'Query finished with an average of ' + totalTime / iterations + 'ms total elapsed time of ' + totalTime + 'ms' );*/
 
-	$( 'a[data-ga-track], input[data-ga-track], textarea[data-ga-track], button[data-ga-track]' ).gaeventtracker();
+	$( 'a[data-ga-track], input[data-ga-track], textarea[data-ga-track], button[data-ga-track]' ).gatrack();
 
-}( jQuery, window, document ) );
+}( jQuery ) );

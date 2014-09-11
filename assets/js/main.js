@@ -6,8 +6,25 @@ jQuery( document ).ready(function( $ ) {
 	debug = true;
 	debugType = 'alert';
 
+    $('a[target="_blank"]').gatrack({
+        'ga_type'  : 'universal',
+        'category' : 'Outbound Links',
+        'action'   : $(this).attr('href'),
+        'label'    : location.pathname,
+        'value'    : 0,
+        'nonint'   : false,
+        'delay'    : true,
+        'delay_timeout' : 100,
+        'debug'    : {
+						 'status' : debug,
+						 'type'	  : debugType
+					 }
+    });
+
+	/* Start Demos */
+
     // Click Demo
-    $('.track-it.click').gaeventtracker({
+    $('.track-it.click').gatrack({
         'ga_type'  : 'all',
         'category' : 'Click Fallback Category',
         'action'   : 'Click Fallback Action',
@@ -22,23 +39,8 @@ jQuery( document ).ready(function( $ ) {
 					 }
     });
 
-	// Hover Demo
-    $('.track-it.hover').gaeventtracker({
-        'ga_type'  : 'all',
-        'trigger'  : 'mouseenter',
-        'category' : 'Hover Fallback Category',
-        'action'   : 'Hover Fallback Action',
-        'delay'    : false,
-        'value'    : 2222,
-        'nonint'   : true,
-        'debug'    : {
-						 'status' : debug,
-						 'type'	  : debugType
-					 }
-    });
-
     // Blur Demo
-    $('.track-it.blur').gaeventtracker({
+    $('.track-it.blur').gatrack({
         'ga_type'  : 'all',
         'trigger'  : 'blur',
         'category' : 'Blur Fallback Category',
@@ -53,7 +55,7 @@ jQuery( document ).ready(function( $ ) {
     });
 
     // Focus Demo
-    $('.track-it.focus').gaeventtracker({
+    $('.track-it.focus').gatrack({
         'ga_type'  : 'all',
         'trigger'  : 'focus',
         'category' : 'Focus Fallback Category',
@@ -64,21 +66,6 @@ jQuery( document ).ready(function( $ ) {
         'debug'    : {
 						 'status' : debug,
 						 'type'	  : 'console'
-					 }
-    });
-
-    // Submit Demo
-    $('form.track-it').gaeventtracker({
-        'ga_type'  : 'all',
-        'trigger'  : 'submit',
-        'category' : 'Form Submit Fallback Category',
-        'action'   : 'Form Submit Fallback Action',
-        'value'    : 5555,
-        'nonint'   : false,
-        'delay'    : true,
-        'debug'    : {
-						 'status' : debug,
-						 'type'	  : debugType
 					 }
     });
 

@@ -44,7 +44,13 @@
 	            <div class="col-md-4 text-center">
 					<div class="table">
 						<div class="vertical-center">
-							<a href="#" class="btn btn-lg btn-outline btn-outline-white download-button"><i class="glyphicon glyphicon-cloud-download"></i> jquery.ga-events.js <small>v1.2</small></a>
+							<a href="#"
+								data-ga-track
+								data-ga-category="Downloads"
+								data-ga-action="v1.2"
+								data-ga-delay="false"
+								data-ga-nonint="true"
+								class="btn btn-lg btn-outline btn-outline-white download-button" download><i class="glyphicon glyphicon-cloud-download"></i> jquery.ga-events.js <small>v1.2</small></a>
 						</div>
 					</div>
 

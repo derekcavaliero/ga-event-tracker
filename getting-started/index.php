@@ -17,11 +17,11 @@
 <p>The jquery.ga-events.js plugin is dependent on the following additional libraries:</p>
 
 <ol>
-	<li><a href="">jQuery</a> version 1.4.3 or greater</li>
-	<li>Google Analytics <a href="">ga.js (classic)</a> or <a href="">analytics.js (universal)</a></li>
+	<li><a href="http://jquery.com/download/" target="_blank">jQuery</a> version 1.4.3 or greater</li>
+	<li>Google Analytics <a href="https://developers.google.com/analytics/devguides/collection/gajs/" target="_blank">ga.js (classic)</a> or <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/" target="_blank">analytics.js (universal)</a></li>
 </ol>
 
-<p>Installing the script is easy, simply <a href="">download the latest version of jquery.ga-events.js</a> and include the script after jQuery and the Google Analytics tracking code.</p>
+<p>Installing the script is easy, simply <a href="#">download the latest version of jquery.ga-events.js</a> and include the script after jQuery and the Google Analytics tracking code.</p>
 
 <div class="bs-example"></div>
 
