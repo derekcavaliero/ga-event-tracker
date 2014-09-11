@@ -1,0 +1,274 @@
+@import "http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700|Open+Sans+Condensed:300,700";
+
+/****************************
+* GENERAL / CONTENT STYLES
+*****************************/
+
+body {
+	font-family:'Open Sans',sans-serif;
+	font-weight:400;
+}
+
+/* TEXT */
+
+h2, h3, h4, h5, h6{
+	padding-top: 20px;
+	font-weight: 300;
+	margin: 0 0 20px 0;
+}
+
+.lead {
+	font-weight:300;
+}
+
+small{
+	font-size: 60%;
+}
+
+p code{
+	white-space: normal;
+}
+
+p,pre,ul,ol {
+	margin-bottom:20px;
+}
+
+div.table{
+	display: table;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+div.table > .vertical-center{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.bs-example:empty{
+	padding-top: 32px;
+}
+
+/* BUTTONS */
+
+.btn {
+	font-family:'Open Sans Condensed','Open Sans',sans-serif;
+	font-weight:700;
+	text-transform:uppercase;
+	text-shadow:none;
+}
+.btn i.glyphicon{
+	margin-right:5px;
+}
+
+.btn-outline-white {
+	color:#fff;
+	border-color:#fff;
+	background-color:transparent;
+}
+
+.btn-outline-white:active,
+.btn-outline-white:focus,
+.btn-outline-white:hover {
+	color: #138DCE;
+	background-color:#fff;
+	border-color:#fff;
+}
+
+.download-button{
+	font-family: 'Open Sans',sans-serif;
+	font-weight: 400;
+	text-transform: none;
+	margin: 20px 0;
+}
+
+/***************************
+* HEADER STYLES
+****************************/
+
+#site-head {
+	padding:10px 0;
+	color:#fff;
+}
+#site-head .masthead-brand a,
+#site-head .masthead-nav > li > a {
+	color: #138DCE;
+}
+
+#banner{
+	padding:40px 0;
+	background-color:#138DCE;
+	margin-bottom:30px;
+}
+#banner h1 {
+	color: #fff;
+	font-family:'Open Sans Condensed','Open Sans',sans-serif;
+	font-size: 40px;
+	font-weight:700;
+	margin: 0 0 10px 0;
+	padding: 0;
+	text-transform: uppercase;
+}
+#banner p{
+	color: #fff;
+	margin-bottom: 0;
+}
+
+.masthead-brand {
+	margin-top:10px;
+	margin-bottom:10px;
+	padding-top: 0;
+	padding-bottom: 0;
+	font-weight: 400;
+}
+
+.masthead-brand a {
+	color:#fff;
+	text-decoration:none;
+	display:inline-block;
+	line-height:44px;
+}
+
+.masthead-brand img {
+	height:44px;
+}
+
+.masthead-nav {
+	margin-top:10px;
+}
+
+.masthead-nav > li {
+	display:inline-block;
+}
+
+.masthead-nav > li + li {
+	margin-left:20px;
+}
+
+.masthead-nav > li > a {
+	font-family:'Open Sans Condensed','Open Sans',sans-serif;
+	font-weight:700;
+	text-transform:uppercase;
+	padding-right:0;
+	padding-left:0;
+	font-size:16px;
+	font-weight:700;
+	color:#fff;
+	/* IE8 proofing */
+	opacity:.75;
+	text-shadow:none;
+}
+
+.masthead-nav > li > a:hover,.masthead-nav > li > a:focus {
+	opacity:1;
+	background:transparent!important;
+}
+
+@media (min-width: 768px) {
+	.masthead-brand {
+		float:left;
+	}
+
+	.masthead-nav {
+		float:right;
+	}
+}
+
+/***************************
+* FOOTER STYLES
+****************************/
+
+.footer {
+	padding-top:19px;
+	margin-top:30px;
+	color:#777;
+	border-top:1px solid #e5e5e5;
+}
+
+@media (min-width: 970px) {
+
+	#banner{
+		padding:60px 0;
+	}
+
+	#banner h1 {
+		font-size: 50px;
+	}
+
+	#banner .banner-content,
+	#banner div.table,
+	#banner div.table > .vertical-center{
+		height: 125px;
+	}
+
+}
+
+@media (min-width: 1200px) {
+
+	.container{
+		width: 970px;
+	}
+
+}
+
+/****************************
+* PRETTIFY CSS
+*****************************/
+
+.com {
+	color:#93a1a1;
+}
+
+.lit {
+	color:#195f91;
+}
+
+.pun,.opn,.clo {
+	color:#93a1a1;
+}
+
+.fun {
+	color:#dc322f;
+}
+
+.str,.atv {
+	color:#D14;
+}
+
+.kwd,.prettyprint .tag {
+	color:#1e347b;
+}
+
+.typ,.atn,.dec,.var {
+	color:teal;
+}
+
+.pln {
+	color:#48484c;
+}
+
+.prettyprint {
+	padding:8px 0 !important;
+	background-color:#f7f7f9;
+	border:1px solid #e1e1e8;
+	font-size: 12px;
+}
+
+.prettyprint.linenums {
+	-webkit-box-shadow:inset 40px 0 0 #fbfbfc,inset 41px 0 0 #ececf0;
+	-moz-box-shadow:inset 40px 0 0 #fbfbfc,inset 41px 0 0 #ececf0;
+	box-shadow:inset 40px 0 0 #fbfbfc,inset 41px 0 0 #ececf0;
+}
+
+ol.linenums {
+	margin:0;
+	padding:0 0 0 32px;
+}
+
+ol.linenums li {
+	padding-left:12px;
+	color:#bebec5;
+	line-height:20px;
+	text-shadow:0 1px 0 #fff;
+}

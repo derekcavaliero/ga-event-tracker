@@ -1,38 +1,36 @@
 /*!
- * jQuery Event Tracker Plugin
- * Examples and documentation at: http://www.derekcavaliero.com/jquery-event-tracker
+ * jQuery GA Event Tracker
+ * Examples and documentation at: http://ga-event-tracker.wmxtools.com
  * Copyright (c) 2014 Derek Cavaliero
- * Version: 1.0 (31-JAN-2014)
- * Requires: jQuery v1.3.2 or later
+ * Version: 1.1 (10-SEPT-2014)
+ * Requires: jQuery v1.4.3 or later
  */
 
 ;(function ( $, window, document, undefined ) {
 
 	$.fn.gaeventtracker = function( options ){
 
-		var defaults = {
-							'category'      : 'Tracked Element',
-							'action'        : 'Clicked',
-							'label'         : location.pathname,
-							'value'         : 0,
-							'nonint'        : true,
-							'delay'         : true,
-							'delay_timeout' : 100,		  // time for delay in milliseconds
-							'trigger'       : 'click',    // click | focus | blur
-							'ga_type'       : 'classic',  // classic | universal | all
-							'debug'         : {
-											       'type'   : 'console', // console or alert
-											       'status' : true
-											  }
-					   };
+		defaults = {
+						'category'      : 'Tracked Element',
+						'action'        : 'Clicked',
+						'label'         : location.pathname,
+						'value'         : 0,
+						'nonint'        : true,
+						'delay'         : true,
+						'delay_timeout' : 100,		  // time for delay in milliseconds
+						'trigger'       : 'click',    // click | focus | blur
+						'ga_type'       : 'classic',  // classic | universal | all
+						'debug'         : {
+										       'type'   : 'console', // console or alert
+										       'status' : true
+										  }
+				   };
 
-	    var settings = $.extend( {}, defaults, options );
+	    settings = $.extend( {}, defaults, options );
 
 		return this.each( function() {
 
 			var $this = $( this );
-
-	    	var nonint, delay;
 
 	    	if ( ( $this.data( 'ga-nonint' ) != undefined ) &&
 	    		 ( $this.data( 'ga-nonint' ) != settings.nonint ) ){
@@ -97,20 +95,16 @@
 
 	        	if( settings.debug.status ){
 
-					if( settings.debug.status ){
-
-						var debugString = '\nTrigger Action: ' + eventvalues.trigger +
-							    		  '\nCategory: ' + eventvalues.category +
-							    		  '\nAction: ' + eventvalues.action +
-							    		  '\nLabel: ' + eventvalues.label  +
-							    		  '\nValue: ' + eventvalues.value +
-							    		  '\nNon-Interaction: ' + eventvalues.nonint +
-							    		  '\nDelay: ' + eventvalues.delay +
-							    		  '\nDelay Length: ' + settings.delay_timeout + ' milliseconds' +
-							    		  '\nGA Type: ' + eventvalues.ga_type +
-							    		  '\nLink Value: ' + eventvalues.link;
-
-					}
+					var debugString = '\nTrigger Action: ' + eventvalues.trigger +
+						    		  '\nCategory: ' + eventvalues.category +
+						    		  '\nAction: ' + eventvalues.action +
+						    		  '\nLabel: ' + eventvalues.label  +
+						    		  '\nValue: ' + eventvalues.value +
+						    		  '\nNon-Interaction: ' + eventvalues.nonint +
+						    		  '\nDelay: ' + eventvalues.delay +
+						    		  '\nDelay Length: ' + settings.delay_timeout + ' milliseconds' +
+						    		  '\nGA Type: ' + eventvalues.ga_type +
+						    		  '\nLink Value: ' + eventvalues.link;
 
 					switch( settings.debug.type ){
 
@@ -132,6 +126,8 @@
 				}
 
 	      	});
+
+	      	return $this;
 
 		});
 
@@ -223,4 +219,4 @@
 
 	$( 'a[data-ga-track], input[data-ga-track], textarea[data-ga-track], button[data-ga-track]' ).gaeventtracker();
 
-}( jQuery, window, document );
+}( jQuery, window, document ) );
