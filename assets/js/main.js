@@ -4,22 +4,41 @@ jQuery( document ).ready(function( $ ) {
     window.prettyPrint && prettyPrint();
 
 	debug = true;
-	debugType = 'alert';
+	debugType = 'console';
 
-    $('a[target="_blank"]').gatrack({
-        'ga_type'  : 'universal',
-        'category' : 'Outbound Links',
-        'action'   : $(this).attr('href'),
-        'label'    : location.pathname,
-        'value'    : 0,
-        'nonint'   : false,
-        'delay'    : true,
-        'delay_timeout' : 100,
-        'debug'    : {
-						 'status' : debug,
-						 'type'	  : debugType
-					 }
-    });
+	/*var iterations = 100;
+	var totalTime = 0;
+
+	for (i = 0; i < iterations; i++) {
+
+	  var start = new Date().getTime();*/
+
+	      $('a[target="_blank"]').each(function() {
+
+			    $(this).gatrack({
+			        'ga_type'  : 'universal',
+			        'category' : 'Outbound Links',
+			        'action'   : $(this).attr('href'),
+			        'label'    : location.pathname,
+			        'value'    : 0,
+			        'nonint'   : false,
+			        'delay'    : true,
+			        'delay_timeout' : 100,
+			        'debug'    : {
+									 'status' : debug,
+									 'type'	  : debugType
+								 }
+			    });
+
+		    });
+
+	  /*var end = new Date().getTime();
+
+	  totalTime += (end - start);
+
+	}
+
+	console.log( 'Query finished with an average of ' + totalTime / iterations + 'ms total elapsed time of ' + totalTime + 'ms' );*/
 
 	/* Start Demos */
 

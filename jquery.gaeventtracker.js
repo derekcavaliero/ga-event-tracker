@@ -28,7 +28,7 @@
 
 	    var settings = $.extend( {}, defaults, options );
 
-		return this.each( function() {
+		return this.each( function(i, elem) {
 
 			var $this = $( this );
 
